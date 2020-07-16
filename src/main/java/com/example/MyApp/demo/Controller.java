@@ -53,5 +53,15 @@ public class Controller {
         return db.findUser(id);
     }
 
+    @PutMapping("/users")
+    public boolean updateAUser(@RequestBody User user) {
+     return  db.updateUser(user);
+    }
+
+    @DeleteMapping("/users/{id}")
+    public boolean deleteAUser(@PathVariable int id){
+    return db.deleteAUser(id);
+    }
+
 
 }

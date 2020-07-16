@@ -29,4 +29,25 @@ public class Db {
         System.out.println("Could not find the user");
         return null;
     }
+
+    public boolean updateUser(User inputUser) {
+        for(User user:userTable){
+            if(user.getId()==inputUser.getId()){
+                user.setAge(inputUser.getAge());
+                user.setName(inputUser.getName());
+                return true;
+            }
+        }
+      return false;
+    }
+
+    public boolean deleteAUser(int id) {
+        for(User user:userTable){
+            if(user.getId()==id){
+                 userTable.remove(user);
+                 return true;
+            }
+        }
+        return false;
+    }
 }
