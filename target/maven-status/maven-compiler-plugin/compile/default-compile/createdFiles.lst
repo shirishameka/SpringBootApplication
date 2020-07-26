@@ -1,5 +1,12 @@
 com/example/MyApp/demo/Db.class
+com/example/MyApp/demo/beansTest.class
 com/example/MyApp/demo/GitHubUser.class
-com/example/MyApp/demo/User.class
+com/example/MyApp/demo/BookController.class
+com/example/MyApp/demo/Myconfig.class
 com/example/MyApp/demo/DemoApplication.class
 com/example/MyApp/demo/Controller.class
+com/example/MyApp/demo/UserService.class
+com/example/MyApp/demo/User.class
+com/example/MyApp/demo/User2Controller.class
+com/example/MyApp/demo/User1.class
+com/example/MyApp/demo/UserController.class

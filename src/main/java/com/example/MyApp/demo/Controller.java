@@ -17,6 +17,8 @@ import java.util.List;
 @RestController
 public class Controller {
 
+    //We can have many controlles depending on our requirement or usecases
+
     Db db=new Db();
 
     @RequestMapping(value = "/hi2", method = RequestMethod.GET)
