@@ -36,6 +36,7 @@ public class UserController {
 
          */
     }
+/*
 
     @GetMapping("/v3/users")
     public String getUser(){
@@ -47,6 +48,8 @@ public class UserController {
     public void getUserPost(@RequestBody User1 user1){
         System.out.println(user1);
     }
+
+ */
 
     //Diff between @Restcontroller and @Controller
     //@Rest controller (here we are passing java class , but response it is converting into json
@@ -72,7 +75,7 @@ public class UserController {
 
     //no need to creat a object for controller , spring will provide by default
 
-
+/*
 
     //We can use requestMApping instead of GEt ot Post mapping , request mapping can be used for any http verbs
     @RequestMapping(value ="/v3/users",method = RequestMethod.POST)
@@ -81,5 +84,5 @@ public class UserController {
         service.insert(user1);
     }
 
-
+*/
 }

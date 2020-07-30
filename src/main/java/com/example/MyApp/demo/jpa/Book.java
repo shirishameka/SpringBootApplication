@@ -1,12 +1,28 @@
 package com.example.MyApp.demo.jpa;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+// @Table(name="myBook")
 public class Book {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @JoinColumn
+    @ManyToOne      //many(books)->one(author)
+    private Author authorId;
+
+
+    public Author getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(Author authorId) {
+        this.authorId = authorId;
+    }
+
+
 
     public int getId() {
         return id;
@@ -24,6 +40,7 @@ public class Book {
         this.name = name;
     }
 
+    /*
     public String getAuthorName() {
         return authorName;
     }
@@ -32,15 +49,18 @@ public class Book {
         this.authorName = authorName;
     }
 
-    public int getCost() {
+     */
+
+    public Integer getCost() {
         return cost;
     }
 
-    public void setCost(int cost) {
+    public void setCost(Integer cost) {
         this.cost = cost;
     }
 
+    @Column(name = "bookName")
     private String name;
-    private String authorName;
-    private int cost;
+ //   private String authorName;
+    private Integer cost;
 }
